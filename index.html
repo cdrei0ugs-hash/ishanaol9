@@ -17,6 +17,29 @@ box-sizing:border-box;
 font-family:'Fredoka',sans-serif;
 }
 
+/* CIRCULAR PHOTO */
+.photo-wrap{
+display:flex;
+justify-content:center;
+margin-bottom:25px;
+}
+
+.photo-wrap img{
+width:180px;
+height:180px;
+object-fit:cover;
+
+border-radius:50%;
+
+border:6px solid rgba(255,255,255,.7);
+
+box-shadow:
+0 0 25px rgba(255,95,162,.6),
+0 0 50px rgba(255,47,135,.35);
+
+animation:float 3s ease-in-out infinite;
+}
+
 /* BODY */
 body{
 min-height:100vh;
@@ -282,6 +305,14 @@ grid-template-columns:1fr;
 }
 }
 
+/* FLOATING EFFECT */
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-8px);}
+100%{transform:translateY(0);}
+}
+}
+
 </style>
 </head>
 
@@ -291,13 +322,18 @@ grid-template-columns:1fr;
 
 <div class="badge">🎀 SANRIO PARTY INVITATION 🎀</div>
 
+<!-- SISTER PHOTO -->
+<div class="photo-wrap">
+  <img src="isha.jpg" alt="Ayeisha">
+</div>
+
 <h1>
 You're Invited to <br>
 <span class="name">Ayeisha's Birthday</span>
 </h1>
 
 <p class="subtitle">
-Join us for a wonderful celebration filled with games, music, desserts, cute decorations, and unforgettable memories!
+Let's splash, swim, and celebrate!
 </p>
 
 <!-- COUNTDOWN -->
@@ -370,7 +406,7 @@ Join us for a wonderful celebration filled with games, music, desserts, cute dec
 </div>
 
 <h4 class="footer-note">
-✨ Thank you for being part of this magical celebration ✨
+✨ Thank you for being part of this pool party! ✨
 </h4>
 
 </div>
